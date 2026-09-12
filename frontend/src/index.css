@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* User-side palette */
+  --color-lime-sprout: #E4FD97;
+  --color-fresh-canopy: #2D3E2C;
+
+  /* Admin-side palette (dark) */
+  --color-silver: #141414;
+  --color-silver-surface: #1E1E1E;
+  --color-luminous-moss: #2BEE34;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
