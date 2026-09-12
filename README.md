@@ -104,24 +104,3 @@ The app will run at `http://localhost:5173` (Vite's default).
 ### 4. Create your first admin
 There's no separate admin signup — register a normal account, then manually set that user's `role` field to `"admin"` in MongoDB (via Atlas, Compass, or the mongo shell). From there, that account can log in and reach the Admin Dashboard, and can promote/create further admins from the dashboard itself.
 
-## API Reference
-
-All endpoints are prefixed with `/api/users`.
-
-| Method | Endpoint | Access | Description |
-|---|---|---|---|
-| POST | `/register` | Public | Register a new user |
-| POST | `/login` | Public | Log in (user or admin) |
-| GET | `/profile` | Authenticated | Get the logged-in user's profile |
-| PUT | `/profile` | Authenticated | Update the logged-in user's profile |
-| POST | `/upload` | Authenticated | Upload/replace profile image |
-| GET | `/` | Admin only | List all users (supports `search`, `page`, `limit` query params) |
-| POST | `/` | Admin only | Create a new user |
-| PUT | `/:id` | Admin only | Edit a user by ID |
-| DELETE | `/:id` | Admin only | Delete a user by ID |
-
-Authenticated requests must include `Authorization: Bearer <token>`.
-
-## License
-
-MIT — feel free to use this as a starting point for your own projects.
